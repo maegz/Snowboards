@@ -1,0 +1,135 @@
+nav {
+  padding-bottom: 10vh; }
+
+.navFull {
+  margin: 0 auto;
+  padding: 0 40px;
+  background: black;
+  height: 9vh;
+  line-height: 9vh; }
+
+.navItem, .navItem.right, .navItem.right .inputSearch, ::-webkit-input-placeholder {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.navItem, .appLogo, .searchLogo {
+  height: 9vh;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 15px;
+  font-size: 1vh;
+  background-color: inherit;
+  color: white;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, opacity 0.5s ease-in-out; }
+
+.appLogo {
+  vertical-align: middle;
+  height: 5vh;
+  transition: none; }
+
+.navItem:hover, .navBurger .navBurgerLinks .navItem:hover {
+  background-color: white;
+  color: black;
+  opacity: 0.9; }
+
+.navItem.right {
+  display: flex;
+  float: right;
+  vertical-align: top;
+  background-color: #4c4c4c;
+  padding: 0 10px;
+  height: 50%;
+  margin-top: 2.5vh;
+  opacity: 1; }
+  .navItem.right .inputSearch {
+    box-sizing: border-box;
+    width: calc(100% - 20px);
+    border: none;
+    height: 4vh;
+    background-color: transparent;
+    outline: none !important;
+    transition: transform .5s, padding .5s; }
+    .navItem.right .inputSearch:focus {
+      transform: scale(1.1);
+      padding-left: 3%; }
+  .navItem.right .searchLogo {
+    height: 2vh;
+    margin-top: 1.3vh;
+    outline: none !important;
+    transition: transform .5s; }
+    .navItem.right .searchLogo:hover {
+      transform: scale(1.2); }
+
+.navFull {
+  display: none;
+  margin: 0 auto; }
+
+.navBurger {
+  z-index: 999999;
+  background-color: black;
+  height: 10vh;
+  position: fixed;
+  margin-top: 0;
+  width: 100vw;
+  line-height: calc(90vh / 6); }
+  .navBurger .burgerLogo {
+    padding-top: 0.5vh;
+    height: 10vh;
+    width: 10vh;
+    float: left;
+    cursor: pointer; }
+    .navBurger .burgerLogo#true span {
+      border-bottom: 1vh solid white; }
+    .navBurger .burgerLogo span {
+      width: 8vh;
+      border-bottom: 1vh solid #4c4c4c;
+      border-radius: 5%;
+      display: block;
+      padding-top: 1.5vh;
+      margin-left: 1vh;
+      transition: border-bottom .5s; }
+  .navBurger .navItem.right {
+    height: 8vh;
+    margin: 1vh 1vh; }
+    .navBurger .navItem.right .inputSearch {
+      margin: 2vh 0 0 1vh;
+      font-size: 2vh;
+      width: initial; }
+    .navBurger .navItem.right .searchLogo {
+      height: 3vh;
+      margin-top: 2.5vh; }
+  .navBurger .navBurgerLinks {
+    transition: visibility .5s ease-in-out, opacity .5s ease-in-out;
+    margin-top: 10vh;
+    height: 90vh;
+    background: black; }
+    .navBurger .navBurgerLinks#false {
+      opacity: 0;
+      visibility: hidden; }
+    .navBurger .navBurgerLinks#true {
+      opacity: 1;
+      visibility: visible; }
+    .navBurger .navBurgerLinks .navItem {
+      text-align: center;
+      width: 100%;
+      height: calc(90vh / 6);
+      font-size: 5vh;
+      padding: 0; }
+
+@media (min-width: 900px) {
+  nav {
+    padding-bottom: 0; }
+  .navFull {
+    display: block; }
+  .navBurger {
+    display: none; }
+  .page-layout__viewport {
+    padding-top: 5vh; } }
+
+@media only screen {
+  .navBurger:focus span {
+    border-bottom: 1vh solid white; } }
