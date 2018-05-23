@@ -6,11 +6,11 @@ import SearchImage from '../media/search.svg'
 
 const NavContent = props => (
   <div className='navFull'>
-    <Link to='/' className='navItem'><img className='appLogo' src={LogoImage} alt='Snowboards logo' /></Link>
-    <Link to='/' className='navItem'>Team</Link>
-    <Link to='1' className='navItem'>Events</Link>
-    <Link to='2' className='navItem'>Experience</Link>
-    <Link to='3' className='navItem'>Company</Link>
+    <Link to='/snowboards' className='navItem'><img className='appLogo' src={LogoImage} alt='Snowboards logo' /></Link>
+    <Link to='/snowboards' className='navItem'>Team</Link>
+    <Link to='/snowboards' className='navItem'>Events</Link>
+    <Link to='/snowboards' className='navItem'>Experience</Link>
+    <Link to='/snowboards' className='navItem'>Company</Link>
     <Link to='/contact' className='navItem'>Contact</Link>
     <form className='navItem right' onSubmit={e => e.preventDefault()}> {/* Keep page from reloading */}
       <input type='text' className='inputSearch' onChange={ props.onChange } name='value' placeholder='search' value={ props.value } />
@@ -29,11 +29,11 @@ const NavBurgerContent = props => (
         <input type='image' className='searchLogo' src={ SearchImage } alt='Search!' onClick={ props.fetchSearch } />
       </form>
       <div className='navBurgerLinks' id={ props.state.isActive.toString() }>
-        <Link to='/' onClick={ props.toggleActiveId } className='navItem'>Shop</Link>
-        <Link to='1' onClick={ props.toggleActiveId } className='navItem'>Team</Link>
-        <Link to='2' onClick={ props.toggleActiveId } className='navItem'>Events</Link>
-        <Link to='3' onClick={ props.toggleActiveId } className='navItem'>Experience</Link>
-        <Link to='4' onClick={ props.toggleActiveId } className='navItem'>Company</Link>
+        <Link to='/snowboards' onClick={ props.toggleActiveId } className='navItem'>Shop</Link>
+        <Link to='/snowboards' onClick={ props.toggleActiveId } className='navItem'>Team</Link>
+        <Link to='/snowboards' onClick={ props.toggleActiveId } className='navItem'>Events</Link>
+        <Link to='/snowboards' onClick={ props.toggleActiveId } className='navItem'>Experience</Link>
+        <Link to='/snowboards' onClick={ props.toggleActiveId } className='navItem'>Company</Link>
         <Link to='/contact' onClick={ props.toggleActiveId } className='navItem'>Contact</Link>
       </div>
     </div>
