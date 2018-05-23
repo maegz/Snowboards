@@ -13,7 +13,7 @@ import '../styles/NavComponent.css'
 const Main = () => (
   <main>
     <Switch>
-      <Route exact path='/' component={Shop}/>
+      <Route exact path='/snowboards' component={Shop}/>
       <Route path='/contact' component={Contact}/>
     </Switch>
   </main>
